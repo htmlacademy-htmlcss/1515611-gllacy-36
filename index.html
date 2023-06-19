@@ -58,7 +58,7 @@
           </div>
           <ul class="user-menu">
             <li class="user-menu-item user-search popup-block">
-              <a href="#" class="user-menu-link user-search-link">
+              <a href="#" class=" user-search-link">
                 <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="0.857941" width="32" height="32" rx="16" fill="#FCFCFC" fill-opacity="0.3" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -67,18 +67,21 @@
                 </svg>
                 <span class="visually-hidden">Кнопка поиска по сайту.</span>
               </a>
+
+
+              <!--Search-window-popup-->
               <div class="popup-container">
                 <div class="search-field-wrapper">
                   <form class="search-field" action="https://echo.htmlacademy.ru/" method="get">
-                    <input class="field" type="search" id="search-field" name="field" placeholder="Поиск по сайту"
-                      aria-label="Поле поиска по сайту." required>
+                    <input class="search-field-input" type="search" id="search-field" name="field"
+                      placeholder="Поиск по сайту" aria-label="Поле поиска по сайту." required>
                     <label class="visually-hidden" for="search-field">Поиска по сайту</label>
-                    <button class="search-reset-button" type="reset">
-                      <span class="visually-hidden">Сбросить.</span>
-                    </button>
+                    <span class="visually-hidden">Сбросить.</span>
                   </form>
                 </div>
               </div>
+
+
             </li>
             <li class="user-menu-item user-login popup-block">
               <a href="#" class="user-menu-link user-login-link user-menu-font">
@@ -90,25 +93,31 @@
                 </svg>
                 <span class="entry-text">Вход</span>
               </a>
+
+              <!--Login-window-popup-->
               <div class="popup-container">
-                <div class="login-window-popover">
-                  <h2>Личный кабинет</h2>
+                <div class="login-window-popup">
                   <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <h2 class="login-window-popup-title">Личный кабинет</h2>
                     <label for="login-email" class="visually-hidden">Ваш e-mail.</label>
                     <input type="email" class="login-field email-field" id="login-email" placeholder="email@example.com"
                       required>
                     <label for="login-password" class="visually-hidden">Ваш пароль.</label>
                     <input type="password" class="login-field password-field" id="login-password" placeholder="123456"
                       required>
-                    <button class="login-button" type="submit">Войти</button>
-                    <div class="login-options-wrapper">
-                      <a class="login-options-link" href="#">Забыли пароль?</a>
-                      <a class="login-options-link" href="#">Регистрация</a>
+                    <div class="bottom-wrapper">
+                      <button class="login-button buttons-font send-btn" type="submit">Войти</button>
+                      <div class="login-options-wrapper">
+                        <a class="login-options-link" href="#">Забыли пароль?</a>
+                        <a class="login-options-link" href="#">Регистрация</a>
+                      </div>
                     </div>
                   </form>
                 </div>
               </div>
             </li>
+
+
             <li class="user-menu-item user-cart popup-block">
               <a href="#" class="user-menu-link user-cart-link">
 
@@ -123,39 +132,51 @@
                 <span class="cart-items cart-empty visually-hidden">Нет товаров</span>
               </a>
               <span class="visually-hidden">Кнопка корзины.</span>
-              <div class="popup-container">
-                <section class="popover">
-                  <h2>Корзина</h2>
+
+
+              <!--Cart-window-popover--->
+              <div class="popup-container cart-wrapper">
+                <section class="cart-popover">
+                  <h2 class="cart-title">Корзина</h2>
                   <div class="cart-popover-wrapper cart-not-empty">
                     <form class="checkout" action="https://echo.htmlacademy.ru/" method="post">
                       <ul class="cart-items-list">
                         <li class="cart-item">
                           <a class="cart-items-link" href="#">
-                            <img class="cart-items-image" src="images/photos/малинка.jpg" width="46" height="46"
+                            <img class="cart-items-image" src="images/photos/raspberry.png" width="46" height="46"
                               alt="Малиновое мороженое.">
-                            <h3 class="cart-items-title">Малинка</h3>
-                            <p class="cart-items-info">1 кг х 310 ₽</p>
+                            <div class="cart-product-wrapper raspberry-wrapper">
+                              <h3 class="cart-items-title">Малинка</h3>
+
+                              <p class="cart-items-info">1 кг х 310 ₽</p>
+                            </div>
                             <p class="cart-items-price">310 ₽</p>
+
                           </a>
                           <input type="hidden" name="order-item" value="Мороженое малиновое"> <!--HOW IS THAT-->
-                          <button class="delete-cart-item" type="button"
+                          <button class="delete-cart-item modal-close-btn" type="button"
                             aria-label="Удалить товар из корзины."></button>
                         </li>
                         <li class="cart-item">
                           <a class="cart-items-link" href="#">
-                            <img class="cart-items-image" src="images/photos/бабл-гам.jpg" width="46" height="46"
+                            <img class="cart-items-image" src="images/photos/bubble-gum.png" width="46" height="46"
                               alt="Мороженое бабл-гам.">
-                            <h3 class="cart-items-title">Бабл-гам</h3>
-                            <p class="cart-items-info">1,5 кг х 320 ₽</p>
+                            <div class="cart-product-wrapper gum-wrapper">
+                              <h3 class="cart-items-title">Бабл-гам</h3>
+                              <p class="cart-items-info">1,5 кг х 320 ₽</p>
+                            </div>
                             <p class="cart-items-price">480 ₽</p>
                           </a>
                           <input type="hidden" name="order-item" value="Мороженое бабл-гам">
-                          <button class="delete-cart-item" type="button"
+                          <button class="delete-cart-item modal-close-btn" type="button"
                             aria-label="Удалить товар из корзины."></button>
                         </li>
                       </ul>
-                      <button class="submit-order">Оформить заказ</button>
-                      <p class="total-price">Итого: 790 ₽</p>
+                      <div class="divider"></div>
+                      <div class="order-wrapper">
+                        <button class="submit-order send-btn buttons-font order-btn">Оформить заказ</button>
+                        <p class="total-price">Итого: 790 ₽</p>
+                      </div>
                     </form>
                   </div>
                   <div class="cart-popover-wrapper cart-empty">
@@ -209,6 +230,7 @@
                           alt="Мороженое с клубничным джемом" class="slider-image">
                       </a>
                     </div>
+                  </div>
                 </li>
                 <li class="slider-screen-item banana-screen" style="order: 1">
                   <div class="slider-screen-wrapper">
@@ -225,6 +247,7 @@
                           alt="Мороженое со вкусом банана" class="slider-image">
                       </a>
                     </div>
+                  </div>
                 </li>
                 <li class="slider-screen-item caramel-screen" style="order: 2">
                   <div class="slider-screen-wrapper">
@@ -240,6 +263,7 @@
                           alt="Мороженое с маршмеллоу" class="slider-image">
                       </a>
                     </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -337,7 +361,7 @@
               </a>
               <p class="raspberry-text img-text">Сливочное мороженое<br> с малиновым джемом</p>
               <div class="price-wrapper">
-                <p class="price price-font" href="#">310 ₽/кг</p>
+                <p class="price price-font">310 ₽/кг</p>
                 <button class="add-to-cart" type="button">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -368,7 +392,7 @@
             </li>
             <li class="card-item">
               <a class="card-item-link" href="#">
-                <img src="images/photos/blueberry.png" alt="Черника." class="ice-cream-img" width="168" height="168">
+                <img src="images/photos/blackberry.png" alt="Черника." class="ice-cream-img" width="168" height="168">
                 <h3 class="blackberry-img img-title">Черника</h3>
               </a>
               <p class="blackberry-text img-text">Крем-брюле<br> с черничным джемом</p>
@@ -459,9 +483,9 @@
                 <label for="subscription-email" class="subscription-email-label visually-hidden">Ваш email.</label>
                 <input id="subscription-email" type="email" name="email" placeholder="email@example.com" required
                   class="subscription-input input-font">
-                <button type="submit" method="post" class="send-btn buttons-font button">Отправить</button>
+                <button type="submit" class="send-btn buttons-font button">Отправить</button>
               </form>
-
+            </div>
           </section>
         </div>
 
@@ -515,7 +539,7 @@
         <section class="contacts">
           <h2 class="visually-hidden">Адрес и контакты.</h2>
           <div class="contacts-wrapper">
-            <p class="address-title">Адрес главного офиса<br> и офлайн-магазина:</з>
+            <p class="address-title">Адрес главного офиса<br> и офлайн-магазина:</p>
             <address class="address-details">наб. реки Карповки,<br> 5 лит П, Санкт-Петербург</address>
             <p class="tel-title">Для заказов по телефону:</p>
             <a href="tel:+78128121212" class="phonenumber-link">+7 (812) 812-12-12</a>
@@ -616,26 +640,27 @@
       </footer>
     </div>
 
-
+    <!--Modal window-->
     <div class="modal-container">
-      <div class="modal-window">
-        <h2>Мы обязательно ответим вам!</h2>
+      <div class="modal-window form-not-focused">
         <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="name-field" class="form-field-label visually-hidden">Введите имя и фамилию.</label>
+          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+          <label for="name-field" class="form-field-label name-input visually-hidden">Введите имя и фамилию.</label>
           <input type="text" class="form-field-input" id="name-field" placeholder="Имя и фамилия" required>
           <label for="email-field" class="form-field-label visually-hidden">Введите email.</label>
-          <input type="email" class="form-field-input" id="email-field" placeholder="email@example.com" required>
+          <input type="email" class="form-field-input email-input" id="email-field" placeholder="email@example.com"
+            required>
           <label for="feedback-textarea" class="form-field-label visually-hidden">Введите сообщение.</label>
           <textarea class="form-textarea" id="feedback-textarea" name="message" placeholder="В свободной форме"
             required></textarea>
-          <button class="submit-button" type="submit">Отправить</button>
+          <button class="submit-button send-btn buttons-font" type="submit">Отправить</button>
+          <button class="modal-close-btn" type="button">
+            <span class="visually-hidden">Кнопка закрытия окна.</span>
+          </button>
         </form>
-        <button class="modal-close" type="button">
-          <span class="visually-hidden">Кнопка закрытия окна.</span>
-        </button>
+
       </div>
     </div>
-    <!--<script src="script.js"></script>-->
   </body>
 
 </html>
